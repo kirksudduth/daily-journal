@@ -2,3 +2,19 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* background-color: blue; */
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display: flex;
+    justify-content: left;
+}
