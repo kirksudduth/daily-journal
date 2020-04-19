@@ -8,6 +8,7 @@ form {
     flex-direction: column;
     justify-content: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify
 }
 
 fieldset {
@@ -18,5 +19,6 @@ fieldset {
 input {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    width: 120px;
 }
