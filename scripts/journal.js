@@ -50,7 +50,12 @@ const makeJournalEntryComponent = (journalEntry) => {
 
     Arguments: entries (array of objects)
 */
-const renderJournalEntries = (entries) => {};
-
+const journalContainer = document.querySelector(".entryLog");
+const renderJournalEntries = (entries) => {
+  for (let i = 0; i < journalEntries.length; i++) {
+    const entries = journalEntries[i];
+    journalContainer.innerHTML += makeJournalEntryComponent(entries);
+  }
+};
 // Invoke the render function
 renderJournalEntries(journalEntries);
