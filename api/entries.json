@@ -22,14 +22,18 @@
       "mood": "confused"
     },
     {
-      "id": 4
-    },
-    {
-      "id": " 4,",
+      "id": 4,
       "date": " 4/24/2020,",
       "concepts": " data management,",
       "entry": " it's funny(?) to think that there is so much more information to learn when i already feel like my brain is bursting at the seams",
       "mood": " happy"
+    },
+    {
+      "date": "4/24/2020",
+      "concepts": "browser events",
+      "entry": "we talked about, like, when you do stuff on a page and stuff, like, what the behavior of the code is going on and stuff.",
+      "mood": "Optimistic",
+      "id": 5
     }
   ]
 }
