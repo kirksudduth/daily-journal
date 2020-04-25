@@ -1,6 +1,8 @@
 h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  /* background-color: blue; */
+  text-shadow: tomato 3px 2px;
+  color: moccasin;
+  background-image: linear-gradient(to top, tomato, transparent);
 }
 
 form {
@@ -19,4 +21,26 @@ input {
   display: flex;
   justify-content: center;
   width: 120px;
+}
+
+.journal_entry {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.journal_entry > h2 {
+  text-shadow: tomato 3px 2px;
+  color: purple;
+}
+
+.journal_entry > .date > .date_class {
+  text-shadow: tomato 1px 1px;
+  color: purple;
+}
+.journal_entry > .entry > .entry_class {
+  text-shadow: tomato 1px 1px;
+  color: purple;
+}
+.journal_entry > .mood > .mood_class {
+  text-shadow: tomato 1px 1px;
+  color: purple;
 }
