@@ -1,10 +1,14 @@
 console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 
-const makeJournalEntryComponent = (journalEntry) => {
-  // Create your own HTML structure for a journal entry
-  return `
+import apiData from "./data.js";
+import renderJournalEntries from "./entriesDOM.js";
+
+const makeJournalEntryComponent = {
+  entry: function (journalEntry) {
+    // Create your own HTML structure for a journal entry
+    return `
       <div class="journal_entry">
-      <h2 class="concepts">Concept: ${journalEntry.concepts}</h2>
+      <h2 class="concepts disabled">Concept: ${journalEntry.concepts}</h2>
       <p class="date">
         <label class="date_class">Date:</label> ${journalEntry.date}</p>
       <p class="entry">
@@ -12,4 +16,7 @@ const makeJournalEntryComponent = (journalEntry) => {
       <p class="mood">
         <label class="mood_class">Mood:</label> ${journalEntry.mood}</p></div>
     `;
+  },
 };
+
+export default makeJournalEntryComponent;

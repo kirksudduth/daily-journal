@@ -6,7 +6,8 @@ console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 //     console.log("HUH?");
 //     console.table(myEntries);
 //     renderJournalEntries(myEntries);
-//   });
+//   })
+import renderJournalEntries from "./entriesDOM.js";
 
 const API = {
   getJournalEntries() {
@@ -14,7 +15,9 @@ const API = {
       .then((response) => response.json())
       .then((myEntries) => {
         console.log("My Entries: ", myEntries);
-        renderJournalEntries(myEntries);
+        renderJournalEntries.renderEntries(myEntries);
       });
   },
 };
+
+export default API;
