@@ -6,7 +6,8 @@ console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 //     console.log("HUH?");
 //     console.table(myEntries);
 //     renderJournalEntries(myEntries);
-//   });
+//   })
+import renderMethod from "./entriesDOM.js";
 
 const API = {
   getJournalEntries() {
@@ -18,3 +19,5 @@ const API = {
       });
   },
 };
+
+export default journal_api;
