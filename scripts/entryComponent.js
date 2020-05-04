@@ -1,7 +1,7 @@
 console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 
-import { apiData } from "./data.js";
-import { renderMethod } from "./entriesDOM.js";
+import apiData from "./data.js";
+import renderJournalEntries from "./entriesDOM.js";
 
 const makeJournalEntryComponent = {
   entry: function (journalEntry) {
@@ -19,4 +19,4 @@ const makeJournalEntryComponent = {
   },
 };
 
-export default journalComponent;
+export default makeJournalEntryComponent;

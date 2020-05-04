@@ -1,9 +1,9 @@
 h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-image: linear-gradient(to right, tomato, transparent);
+  /* background-image: linear-gradient(to right, tomato, transparent); */
 }
 
-h1.disabled {
+/* h1.disabled {
   text-shadow: tomato 3px 2px;
   color: floralwhite;
 }
@@ -11,7 +11,7 @@ h1.disabled {
 h1.enabled {
   text-shadow: floralwhite 3px 2px;
   color: tomato;
-}
+} */
 
 form {
   display: flex;
@@ -35,7 +35,7 @@ input {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.journal_entry > h2.disabled {
+/* .journal_entry > h2.disabled {
   text-shadow: tomato 3px 2px;
   color: purple;
 }
@@ -51,4 +51,4 @@ input {
 .journal_entry > .mood > .mood_class {
   text-shadow: tomato 1px 1px;
   color: purple;
-}
+} */

@@ -29,6 +29,7 @@ console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
     Change the fake variable names below to what they should be
     to get the data and display it.
 */
-import data from "./data.js";
+import API from "./data.js";
+import renderJournalEntries from "./entriesDOM.js";
 
-API.getJournalEntries().then(renderJournalEntries());
+API.getJournalEntries().then(renderJournalEntries.renderEntries());
