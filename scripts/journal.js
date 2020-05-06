@@ -1,35 +1,55 @@
 console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 
-/*
-    Define the keys and value for a JavaScript object that
-    represents a journal entry about what you learned today
-*/
-
-/*
-    Purpose: To create, and return, a string template that
-    represents a single journal entry object as HTML
-
-    Arguments: journalEntry (object)
-*/
-
-/*
-    Purpose: To render all journal entries to the DOM
-
-    Arguments: entries (array of objects)
-*/
-
-// // Invoke the render function
-
-// Using fetch() to Query Data
-
-/*
-    Main application logic that uses the functions and objects
-    defined in the other JavaScript files.
-
-    Change the fake variable names below to what they should be
-    to get the data and display it.
-*/
-import API from "./data.js";
+import journalAPI from "./data.js";
 import renderJournalEntries from "./entriesDOM.js";
 
-API.getJournalEntries().then(renderJournalEntries.renderEntries());
+journalAPI.getJournalEntries().then(renderJournalEntries);
+// journalAPI.getJournalEntries().then(entries => renderJournalEntries(entries));
+
+const saveButton = document.querySelector("#button__saveEntry");
+
+saveButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const journalDate = document.querySelector("#journalDate").value;
+  const journalConcepts = document.querySelector("#concepts").value;
+  const journalEntryLog = document.querySelector("#journalEntry").value;
+  const journalMood = document.querySelector("#mood").value;
+
+  const newEntry = createJournalEntry(
+    journalDate,
+    journalConcepts,
+    journalEntryLog,
+    journalMood
+  );
+  console.log("new entry: ", newEntry);
+  if (
+    journalDate !== "" &&
+    journalConcepts !== "" &&
+    journalEntryLog !== "" &&
+    journalMood !== ""
+  ) {
+    journalAPI
+      .postJournalEntry(newEntry)
+      .then((dataJS) => {
+        console.log("dataJS", dataJS);
+        return journalAPI.getJournalEntries();
+      })
+      .then((myJournalEntries) => renderJournalEntries(myJournalEntries));
+  } else {
+    alert("Fill out the whole form, dummy!");
+  }
+});
+
+function createJournalEntry(
+  journalDate,
+  journalConcepts,
+  journalEntryLog,
+  journalMood
+) {
+  return {
+    date: journalDate,
+    concepts: journalConcepts,
+    entry: journalEntryLog,
+    mood: journalMood,
+  };
+}
