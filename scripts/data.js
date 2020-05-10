@@ -20,6 +20,11 @@ const journalAPI = {
       body: JSON.stringify(creation),
     }).then((response) => response.json());
   },
+  deleteJournalEntry(journalID) {
+    return fetch(`${entriesURL}/${journalID}`, {
+      method: "DELETE",
+    });
+  },
 };
 
 export default journalAPI;

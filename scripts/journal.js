@@ -3,9 +3,14 @@ console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 import journalAPI from "./data.js";
 import renderJournalEntries from "./entriesDOM.js";
 
-journalAPI.getJournalEntries().then(renderJournalEntries);
-// journalAPI.getJournalEntries().then(entries => renderJournalEntries(entries));
-
+const entryContainer = document.querySelector(".entryLog");
+const getAndRenderEntries = () => {
+  entryContainer.innerHTML = "";
+  journalAPI.getJournalEntries().then(renderJournalEntries);
+};
+// Function to get journal entries from API and then render
+// them to DOM
+getAndRenderEntries();
 const saveButton = document.querySelector("#button__saveEntry");
 
 saveButton.addEventListener("click", (event) => {
@@ -68,11 +73,12 @@ document.querySelector("#mood__filter").addEventListener("click", (event) => {
   }
 });
 
-const entryContainer = document.querySelector(".entryLog");
-
 entryContainer.addEventListener("click", (event) => {
   if (event.target.id.startsWith("delete--")) {
     const entryID = event.target.id.split("--")[1];
-    console.log(entryID);
+    // console.log(entryID);
+    journalAPI.deleteJournalEntry(entryID).then(getAndRenderEntries);
   }
 });
+
+export default entryContainer;

@@ -38,44 +38,9 @@
     {
       "date": "2020-05-05",
       "concepts": "POST",
-      "entry": "yeaaah",
-      "mood": "happy",
-      "id": 6
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST post",
-      "entry": "yeaaah boyeee",
-      "mood": "meh",
-      "id": 7
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
       "entry": "yup",
       "mood": "ecstatic",
       "id": 8
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "Malone",
-      "mood": "weepy",
-      "id": 9
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "man",
-      "mood": "ecstatic",
-      "id": 10
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "wings",
-      "mood": "weepy",
-      "id": 11
     },
     {
       "date": "2020-05-05",
@@ -89,21 +54,7 @@
       "concepts": "mo POST",
       "entry": "Finally got all this junk working after Bryan helped me out. Do I understand it?? eehhhh",
       "mood": "ecstatic",
-      "id": 13
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "mo POST",
-      "entry": "Finally got all this junk working after Bryan helped me out. Do I understand it?? eehhhh",
-      "mood": "ecstatic",
       "id": 14
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "mo POST",
-      "entry": "",
-      "mood": "ecstatic",
-      "id": 15
     },
     {
       "date": "2020-05-06",
