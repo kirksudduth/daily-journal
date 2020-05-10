@@ -67,3 +67,12 @@ document.querySelector("#mood__filter").addEventListener("click", (event) => {
     });
   }
 });
+
+const entryContainer = document.querySelector(".entryLog");
+
+entryContainer.addEventListener("click", (event) => {
+  if (event.target.id.startsWith("delete--")) {
+    const entryID = event.target.id.split("--")[1];
+    console.log(entryID);
+  }
+});
