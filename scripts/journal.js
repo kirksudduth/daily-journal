@@ -53,3 +53,30 @@ function createJournalEntry(
     mood: journalMood,
   };
 }
+// Each one of the radio buttons needs to have a
+// click event listener attached to it. When any
+// of them are clicked, then the only articles that
+// should appear are the ones with the corresponding mood.
+
+document.querySelector("#mood__filter").addEventListener("click", (event) => {
+  console.log(event);
+  if (event.target.value.startsWith("mood--")) {
+    const moodFilter = event.target.value.split("--")[1];
+    console.log(moodFilter);
+    journalAPI.getJournalEntries().then((myEntries) => {
+      const moodyEntries = myEntries.filter(
+        (entry) => entry.mood == moodFilter
+      );
+      renderJournalEntries(moodyEntries.reverse());
+      // .forEach((value) => {
+      //   renderJournalEntries(value);
+      // });
+      // .then((filterEntries) => {
+      //   renderJournalEntries(filterEntries);
+      // });
+    });
+    // .then((filterMoods) => {
+    //   console.log(filterMoods);
+    // });
+  }
+});
