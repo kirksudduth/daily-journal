@@ -111,6 +111,38 @@
         </div>
       </fieldset>
     </form>
+
+    <section id="entryForm">
+      <form>
+        <fieldset class="fieldset">
+          <legend>Edit Journal Entry</legend>
+          <input type="hidden" id="formId" value="" />
+          <label for="journalFormConcept">Concept</label>
+          <input type="text" name="journalFormConcept" id="formConcept" />
+          <label for="journalFormDate">Date</label>
+          <input type="date" name="journalFormDate" id="formDate" />
+          <label for="journalFormEntry">Entry</label>
+          <textarea
+            type="text"
+            name="journalFormEntry"
+            id="formEntry"
+          ></textarea>
+          <label for="journalFormMood">Mood</label>
+          <select name="formMood" id="formMood">
+            <option value="happy">Happy</option>
+            <option value="ecstatic">Ecstatic</option>
+            <option value="meh">Meh</option>
+            <option value="sad">Sad</option>
+            <option value="weepy">Weepy</option>
+            <option value="pissed">Pissed</option>
+            <option value="confused">Confused</option>
+            <option value="optimistic">Optimistic</option>
+            <option value="depressed">Depressed</option>
+          </select>
+          <button id="btn--saveFormEntry">Save Entry</button>
+        </fieldset>
+      </form>
+    </section>
     <article class="entryLog"></article>
     <script type="module" src="scripts/journal.js"></script>
   </body>

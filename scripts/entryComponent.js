@@ -14,8 +14,9 @@ const makeJournalEntryComponent = {
       <p class="entry">
         <label class="entry_class">Entry:</label> ${journalEntry.entry}</p>
       <p class="mood">
-        <label class="mood_class">Mood:</label> ${journalEntry.mood}</p></div>
+        <label class="mood_class">Mood:</label> ${journalEntry.mood}</p>
         <button id="delete--${journalEntry.id}">Delete</button>
+        <button id="edit--${journalEntry.id}">Edit</button></div>
     `;
   },
 };

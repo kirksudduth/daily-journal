@@ -1,38 +1,38 @@
 {
   "journalEntries": [
     {
-      "id": 1,
-      "date": "04/21/2020",
       "concepts": "objects",
+      "date": "2020-04-21",
       "entry": "it has been an eventful learning day. feeling good about it.",
-      "mood": "happy"
+      "mood": "happy",
+      "id": 1
     },
     {
-      "id": 2,
-      "date": "04/21/2020",
       "concepts": "methods",
+      "date": "2020-04-21",
       "entry": "i understand (kind of) what a method is. which is more than i can say about myself yesterday.",
-      "mood": "meh"
+      "mood": "meh",
+      "id": 2
     },
     {
-      "id": 3,
-      "date": "04/21/2020",
       "concepts": "this",
+      "date": "2020-04-21",
       "entry": "we haven't dove super far into it yet. fringe understanding so far",
-      "mood": "confused"
+      "mood": "confused",
+      "id": 3
     },
     {
-      "id": 4,
-      "date": " 4/24/2020,",
       "concepts": " data management,",
+      "date": "2020-04-24",
       "entry": " it's funny(?) to think that there is so much more information to learn when i already feel like my brain is bursting at the seams",
-      "mood": " happy"
+      "mood": "happy",
+      "id": 4
     },
     {
-      "date": "4/24/2020",
       "concepts": "browser events",
+      "date": "2020-04-24",
       "entry": "we talked about, like, when you do stuff on a page and stuff, like, what the behavior of the code is going on and stuff.",
-      "mood": "Optimistic",
+      "mood": "optimistic",
       "id": 5
     },
     {
@@ -57,11 +57,18 @@
       "id": 14
     },
     {
-      "date": "2020-05-06",
       "concepts": "Array Methods",
+      "date": "2020-05-06",
       "entry": "We started going over array methods this morning, then Ashley came and talked to us about our Linkedin pages. V exciting!!!",
-      "mood": "happy",
+      "mood": "optimistic",
       "id": 16
+    },
+    {
+      "concepts": "PUT",
+      "date": "2020-05-11",
+      "entry": "Bryan showed us a great example of using the PUT fetch method on an application. Now I'm trying to figure it out!",
+      "mood": "optimistic",
+      "id": 17
     }
   ]
 }

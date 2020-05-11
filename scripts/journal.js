@@ -34,7 +34,7 @@ saveButton.addEventListener("click", (event) => {
     journalMood !== ""
   ) {
     journalAPI
-      .postJournalEntry(newEntry)
+      .createJournalEntry(newEntry)
       .then((dataJS) => {
         console.log("dataJS", dataJS);
         return journalAPI.getJournalEntries();
@@ -79,6 +79,56 @@ entryContainer.addEventListener("click", (event) => {
     // console.log(entryID);
     journalAPI.deleteJournalEntry(entryID).then(getAndRenderEntries);
   }
+  if (event.target.id.startsWith("edit--")) {
+    const entryID = event.target.id.split("--")[1];
+    journalAPI.getEntryById(entryID).then((journalFormEntry) => {
+      prepopulateForm(journalFormEntry);
+    });
+  }
 });
+
+const formConcept = document.getElementById("formConcept");
+const formDate = document.getElementById("formDate");
+const formEntry = document.getElementById("formEntry");
+const formMood = document.getElementById("formMood");
+const formId = document.getElementById("formId");
+
+const prepopulateForm = (entry) => {
+  formConcept.value = entry.concepts;
+  formDate.value = entry.date;
+  formEntry.value = entry.entry;
+  formMood.value = entry.mood;
+  formId.value = entry.id;
+};
+
+const clearForm = () => {
+  formConcept.value = "";
+  formDate.value = "";
+  formEntry.value = "";
+  formMood.value = "";
+  formId.value = "";
+};
+document
+  .getElementById("btn--saveFormEntry")
+  .addEventListener("click", (event) => {
+    event.preventDefault();
+    const editedEntryId = formId.value;
+
+    const formValueObj = {
+      concepts: formConcept.value,
+      date: formDate.value,
+      entry: formEntry.value,
+      mood: formMood.value,
+    };
+    if (editedEntryId != "") {
+      journalAPI
+        .updateJournalEntry(formValueObj, editedEntryId)
+        .then(getAndRenderEntries);
+      clearForm();
+    } else {
+      journalAPI.createJournalEntry(formValueObj).then(getAndRenderEntries);
+      clearForm();
+    }
+  });
 
 export default entryContainer;
