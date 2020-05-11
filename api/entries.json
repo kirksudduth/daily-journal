@@ -1,53 +1,39 @@
 {
   "journalEntries": [
     {
-      "id": 1,
-      "date": "04/21/2020",
       "concepts": "objects",
+      "date": "2020-04-21",
       "entry": "it has been an eventful learning day. feeling good about it.",
-      "mood": "happy"
-    },
-    {
-      "id": 2,
-      "date": "04/21/2020",
-      "concepts": "methods",
-      "entry": "i understand (kind of) what a method is. which is more than i can say about myself yesterday.",
-      "mood": "meh"
-    },
-    {
-      "id": 3,
-      "date": "04/21/2020",
-      "concepts": "this",
-      "entry": "we haven't dove super far into it yet. fringe understanding so far",
-      "mood": "confused"
-    },
-    {
-      "id": 4,
-      "date": " 4/24/2020,",
-      "concepts": " data management,",
-      "entry": " it's funny(?) to think that there is so much more information to learn when i already feel like my brain is bursting at the seams",
-      "mood": " happy"
-    },
-    {
-      "date": "4/24/2020",
-      "concepts": "browser events",
-      "entry": "we talked about, like, when you do stuff on a page and stuff, like, what the behavior of the code is going on and stuff.",
-      "mood": "Optimistic",
-      "id": 5
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "yeaaah",
       "mood": "happy",
-      "id": 6
+      "id": 1
     },
     {
-      "date": "2020-05-05",
-      "concepts": "POST post",
-      "entry": "yeaaah boyeee",
+      "concepts": "methods",
+      "date": "2020-04-21",
+      "entry": "i understand (kind of) what a method is. which is more than i can say about myself yesterday.",
       "mood": "meh",
-      "id": 7
+      "id": 2
+    },
+    {
+      "concepts": "this",
+      "date": "2020-04-21",
+      "entry": "we haven't dove super far into it yet. fringe understanding so far",
+      "mood": "confused",
+      "id": 3
+    },
+    {
+      "concepts": " data management,",
+      "date": "2020-04-24",
+      "entry": " it's funny(?) to think that there is so much more information to learn when i already feel like my brain is bursting at the seams",
+      "mood": "happy",
+      "id": 4
+    },
+    {
+      "concepts": "browser events",
+      "date": "2020-04-24",
+      "entry": "we talked about, like, when you do stuff on a page and stuff, like, what the behavior of the code is going on and stuff.",
+      "mood": "optimistic",
+      "id": 5
     },
     {
       "date": "2020-05-05",
@@ -55,27 +41,6 @@
       "entry": "yup",
       "mood": "ecstatic",
       "id": 8
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "Malone",
-      "mood": "weepy",
-      "id": 9
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "man",
-      "mood": "ecstatic",
-      "id": 10
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "wings",
-      "mood": "weepy",
-      "id": 11
     },
     {
       "date": "2020-05-05",
@@ -89,28 +54,21 @@
       "concepts": "mo POST",
       "entry": "Finally got all this junk working after Bryan helped me out. Do I understand it?? eehhhh",
       "mood": "ecstatic",
-      "id": 13
-    },
-    {
-      "date": "2020-05-05",
-      "concepts": "mo POST",
-      "entry": "Finally got all this junk working after Bryan helped me out. Do I understand it?? eehhhh",
-      "mood": "ecstatic",
       "id": 14
     },
     {
-      "date": "2020-05-05",
-      "concepts": "mo POST",
-      "entry": "",
-      "mood": "ecstatic",
-      "id": 15
+      "concepts": "Array Methods",
+      "date": "2020-05-06",
+      "entry": "We started going over array methods this morning, then Ashley came and talked to us about our Linkedin pages. V exciting!!!",
+      "mood": "optimistic",
+      "id": 16
     },
     {
-      "date": "2020-05-06",
-      "concepts": "Array Methods",
-      "entry": "We started going over array methods this morning, then Ashley came and talked to us about our Linkedin pages. V exciting!!!",
-      "mood": "happy",
-      "id": 16
+      "concepts": "PUT",
+      "date": "2020-05-11",
+      "entry": "Bryan showed us a great example of using the PUT fetch method on an application. Now I'm trying to figure it out!",
+      "mood": "optimistic",
+      "id": 17
     }
   ]
 }

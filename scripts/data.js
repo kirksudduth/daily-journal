@@ -11,13 +11,32 @@ const journalAPI = {
     //   renderJournalEntries.renderEntries(myEntries);
     // });
   },
-  postJournalEntry(creation) {
+  getEntryById(entryId) {
+    return fetch(`${entriesURL}/${entryId}`).then((response) =>
+      response.json()
+    );
+  },
+  createJournalEntry(creation) {
     return fetch(`${entriesURL}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(creation),
+    }).then((response) => response.json());
+  },
+  deleteJournalEntry(journalID) {
+    return fetch(`${entriesURL}/${journalID}`, {
+      method: "DELETE",
+    });
+  },
+  updateJournalEntry(entryObj, id) {
+    return fetch(`${entriesURL}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(entryObj),
     }).then((response) => response.json());
   },
 };
