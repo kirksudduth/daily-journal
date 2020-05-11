@@ -41,7 +41,7 @@ input {
 }
 
 .journal_entry > h2.disabled {
-  text-shadow: tomato 3px 2px;
+  text-shadow: tomato 2px 1.5px;
   color: purple;
 }
 
