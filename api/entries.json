@@ -4,71 +4,109 @@
       "concepts": "objects",
       "date": "2020-04-21",
       "entry": "it has been an eventful learning day. feeling good about it.",
-      "mood": "happy",
+      "moodId": 1,
       "id": 1
     },
     {
       "concepts": "methods",
       "date": "2020-04-21",
       "entry": "i understand (kind of) what a method is. which is more than i can say about myself yesterday.",
-      "mood": "meh",
+      "moodId": 3,
       "id": 2
     },
     {
       "concepts": "this",
       "date": "2020-04-21",
       "entry": "we haven't dove super far into it yet. fringe understanding so far",
-      "mood": "confused",
+      "moodId": 7,
       "id": 3
     },
     {
       "concepts": " data management,",
       "date": "2020-04-24",
       "entry": " it's funny(?) to think that there is so much more information to learn when i already feel like my brain is bursting at the seams",
-      "mood": "happy",
+      "moodId": 1,
       "id": 4
     },
     {
       "concepts": "browser events",
       "date": "2020-04-24",
       "entry": "we talked about, like, when you do stuff on a page and stuff, like, what the behavior of the code is going on and stuff.",
-      "mood": "optimistic",
+      "moodId": 8,
       "id": 5
     },
     {
       "date": "2020-05-05",
       "concepts": "POST",
       "entry": "yup",
-      "mood": "ecstatic",
+      "moodId": 2,
       "id": 8
     },
     {
       "date": "2020-05-05",
       "concepts": "POST",
       "entry": "journal",
-      "mood": "optimistic",
+      "moodId": 8,
       "id": 12
     },
     {
       "date": "2020-05-05",
       "concepts": "mo POST",
       "entry": "Finally got all this junk working after Bryan helped me out. Do I understand it?? eehhhh",
-      "mood": "ecstatic",
+      "moodId": 2,
       "id": 14
     },
     {
       "concepts": "Array Methods",
       "date": "2020-05-06",
       "entry": "We started going over array methods this morning, then Ashley came and talked to us about our Linkedin pages. V exciting!!!",
-      "mood": "optimistic",
+      "moodId": 8,
       "id": 16
     },
     {
       "concepts": "PUT",
       "date": "2020-05-11",
       "entry": "Bryan showed us a great example of using the PUT fetch method on an application. Now I'm trying to figure it out!",
-      "mood": "optimistic",
+      "moodId": 8,
       "id": 17
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Ecstatic"
+    },
+    {
+      "id": 3,
+      "label": "Meh"
+    },
+    {
+      "id": 4,
+      "label": "Sad"
+    },
+    {
+      "id": 5,
+      "label": "Weepy"
+    },
+    {
+      "id": 6,
+      "label": "Pissed"
+    },
+    {
+      "id": 7,
+      "label": "Confused"
+    },
+    {
+      "id": 8,
+      "label": "Optimistic"
+    },
+    {
+      "id": 9,
+      "label": "Depressed"
     }
   ]
 }

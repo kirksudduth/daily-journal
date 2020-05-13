@@ -57,3 +57,7 @@ input {
   text-shadow: tomato 1px 1px;
   color: purple;
 }
+
+#moodies {
+  flex-direction: row;
+}
