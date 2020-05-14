@@ -11,16 +11,16 @@ const getAndRenderEntries = () => {
 // Function to get journal entries from API and then render
 // them to DOM
 getAndRenderEntries();
-const saveButton = document.querySelector("#button__saveEntry");
+const recordEntryButton = document.querySelector("#button__recordEntry");
 
-saveButton.addEventListener("click", (event) => {
+recordEntryButton.addEventListener("click", (event) => {
   event.preventDefault();
   const journalDate = document.querySelector("#journalDate").value;
   const journalConcepts = document.querySelector("#concepts").value;
   const journalEntryLog = document.querySelector("#journalEntry").value;
-  const journalMood = document.querySelector("#mood").value;
+  const journalMood = parseInt(document.querySelector("#mood").value);
 
-  const newEntry = createJournalEntry(
+  const newEntry = makeJournalEntry(
     journalDate,
     journalConcepts,
     journalEntryLog,
@@ -33,19 +33,13 @@ saveButton.addEventListener("click", (event) => {
     journalEntryLog !== "" &&
     journalMood !== ""
   ) {
-    journalAPI
-      .createJournalEntry(newEntry)
-      .then((dataJS) => {
-        console.log("dataJS", dataJS);
-        return journalAPI.getJournalEntries();
-      })
-      .then((myJournalEntries) => renderJournalEntries(myJournalEntries));
+    journalAPI.createJournalEntry(newEntry).then(getAndRenderEntries);
   } else {
     alert("Fill out the whole form, dummy!");
   }
 });
 
-function createJournalEntry(
+function makeJournalEntry(
   journalDate,
   journalConcepts,
   journalEntryLog,
@@ -55,7 +49,7 @@ function createJournalEntry(
     date: journalDate,
     concepts: journalConcepts,
     entry: journalEntryLog,
-    mood: journalMood,
+    moodId: journalMood,
   };
 }
 
@@ -97,7 +91,7 @@ const prepopulateForm = (entry) => {
   formConcept.value = entry.concepts;
   formDate.value = entry.date;
   formEntry.value = entry.entry;
-  formMood.value = entry.mood;
+  formMood.value = entry.mood.label;
   formId.value = entry.id;
 };
 
@@ -113,18 +107,28 @@ document
   .addEventListener("click", (event) => {
     event.preventDefault();
     const editedEntryId = formId.value;
+    const editedEntryConcept = formConcept.value;
+    const editedEntryDate = formDate.value;
+    const editedEntryMood = formMood.value;
 
     const formValueObj = {
       concepts: formConcept.value,
       date: formDate.value,
       entry: formEntry.value,
-      mood: formMood.value,
+      moodId: formMood.value.id,
     };
     if (editedEntryId != "") {
       journalAPI
         .updateJournalEntry(formValueObj, editedEntryId)
         .then(getAndRenderEntries);
       clearForm();
+    }
+    if (
+      editedEntryConcept === "" ||
+      editedEntryDate === "" ||
+      editedEntryMood === ""
+    ) {
+      alert("Please complete all fields in Edit Journal Entry.");
     } else {
       journalAPI.createJournalEntry(formValueObj).then(getAndRenderEntries);
       clearForm();

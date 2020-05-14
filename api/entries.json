@@ -69,6 +69,76 @@
       "entry": "Bryan showed us a great example of using the PUT fetch method on an application. Now I'm trying to figure it out!",
       "moodId": 8,
       "id": 17
+    },
+    {
+      "concepts": "more",
+      "date": "2020-05-14",
+      "entry": "hahahahahahaah",
+      "moodId": 9,
+      "id": 21
+    },
+    {
+      "concepts": "hey hey",
+      "date": "2020-05-14",
+      "entry": "hey hey",
+      "moodId": 1,
+      "id": 22
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "POST",
+      "entry": "a",
+      "moodId": 2,
+      "id": 24
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "fetch",
+      "entry": "a",
+      "moodId": 1,
+      "id": 25
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "a",
+      "entry": "a",
+      "moodId": 1,
+      "id": 26
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "POST",
+      "entry": "a",
+      "moodId": 1,
+      "id": 27
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "run",
+      "entry": "run",
+      "moodId": 1,
+      "id": 28
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "bbb",
+      "entry": "aaa",
+      "moodId": 5,
+      "id": 29
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "reee",
+      "entry": "333",
+      "moodId": 8,
+      "id": 30
+    },
+    {
+      "date": "2020-05-14",
+      "concepts": "aaasdfasf",
+      "entry": "asdfasdfasdf",
+      "moodId": 7,
+      "id": 31
     }
   ],
   "moods": [

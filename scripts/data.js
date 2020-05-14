@@ -19,7 +19,7 @@ const journalAPI = {
     );
   },
   createJournalEntry(creation) {
-    return fetch(`${entriesURL}`, {
+    return fetch(`${entriesURL}?_expand=mood`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,13 +28,13 @@ const journalAPI = {
     }).then((response) => response.json());
   },
   deleteJournalEntry(journalID) {
-    return fetch(`${entriesURL}/${journalID}`, {
+    return fetch(`${entriesURL}/${journalID}?_expand=mood`, {
       method: "DELETE",
     });
   },
   updateJournalEntry(entryObj, id) {
     return fetch(
-      `${entriesURL}/${id}`,
+      `${entriesURL}/${id}?_expand=mood`,
       // second arg of fetch (object) to edit child of resource
       {
         method: "PUT",
