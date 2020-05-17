@@ -1,24 +1,43 @@
 console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 
 import journalAPI from "./data.js";
-import renderJournalEntries from "./entriesDOM.js";
+import render from "./entriesDOM.js";
 
-const entryContainer = document.querySelector(".entryLog");
+const containers = {
+  entryContainer: document.querySelector(".entryLog"),
+  moodsContainer: document.querySelector("#moods"),
+  moodsEditContainer: document.querySelector("#formMoods"),
+  moodsFilterContainer: document.querySelector("#mood-filter__options"),
+};
+
 const getAndRenderEntries = () => {
-  entryContainer.innerHTML = "";
-  journalAPI.getJournalEntries().then(renderJournalEntries);
+  containers.entryContainer.innerHTML = "";
+  journalAPI.getJournalEntries().then(render.renderEntries);
 };
 // Function to get journal entries from API and then render
 // them to DOM
 getAndRenderEntries();
+const getAndRenderMoods = () => {
+  journalAPI.getMoods().then(render.renderMoods);
+};
+
+getAndRenderMoods();
+
 const recordEntryButton = document.querySelector("#button__recordEntry");
 
 recordEntryButton.addEventListener("click", (event) => {
   event.preventDefault();
-  const journalDate = document.querySelector("#journalDate").value;
-  const journalConcepts = document.querySelector("#concepts").value;
-  const journalEntryLog = document.querySelector("#journalEntry").value;
-  const journalMood = parseInt(document.querySelector("#mood").value);
+  let journalDate = document.querySelector("#journalDate").value;
+  let journalConcepts = document.querySelector("#concepts").value;
+  let journalEntryLog = document.querySelector("#journalEntry").value;
+  let journalMood = parseInt(document.querySelector("#moods").value);
+
+  const clearEntryForm = () => {
+    journalDate = "";
+    journalConcepts = "";
+    journalEntryLog = "";
+    journalMood = "";
+  };
 
   const newEntry = makeJournalEntry(
     journalDate,
@@ -34,6 +53,7 @@ recordEntryButton.addEventListener("click", (event) => {
     journalMood !== ""
   ) {
     journalAPI.createJournalEntry(newEntry).then(getAndRenderEntries);
+    document.getElementById("firstForm").reset();
   } else {
     alert("Fill out the whole form, dummy!");
   }
@@ -60,14 +80,14 @@ document.querySelector("#mood__filter").addEventListener("click", (event) => {
     console.log(moodFilter);
     journalAPI.getJournalEntries().then((myEntries) => {
       const moodyEntries = myEntries.filter(
-        (entry) => entry.mood == moodFilter
+        (entry) => entry.moodId == moodFilter
       );
-      renderJournalEntries(moodyEntries.reverse());
+      render.renderEntries(moodyEntries);
     });
   }
 });
 
-entryContainer.addEventListener("click", (event) => {
+containers.entryContainer.addEventListener("click", (event) => {
   if (event.target.id.startsWith("delete--")) {
     const entryID = event.target.id.split("--")[1];
     // console.log(entryID);
@@ -76,6 +96,7 @@ entryContainer.addEventListener("click", (event) => {
   if (event.target.id.startsWith("edit--")) {
     const entryID = event.target.id.split("--")[1];
     journalAPI.getEntryById(entryID).then((journalFormEntry) => {
+      console.log(journalFormEntry);
       prepopulateForm(journalFormEntry);
     });
   }
@@ -84,14 +105,15 @@ entryContainer.addEventListener("click", (event) => {
 const formConcept = document.getElementById("formConcept");
 const formDate = document.getElementById("formDate");
 const formEntry = document.getElementById("formEntry");
-const formMood = document.getElementById("formMood");
+const formMood = document.getElementById("formMoods");
 const formId = document.getElementById("formId");
 
 const prepopulateForm = (entry) => {
+  console.log(entry);
   formConcept.value = entry.concepts;
   formDate.value = entry.date;
   formEntry.value = entry.entry;
-  formMood.value = entry.mood.label;
+  formMood.value = entry.moodId;
   formId.value = entry.id;
 };
 
@@ -112,18 +134,18 @@ document
     const editedEntryMood = formMood.value;
 
     const formValueObj = {
-      concepts: formConcept.value,
       date: formDate.value,
+      concepts: formConcept.value,
       entry: formEntry.value,
-      moodId: formMood.value.id,
+      moodId: formMood.value,
+      // id: editedEntryId.value,
     };
     if (editedEntryId != "") {
       journalAPI
         .updateJournalEntry(formValueObj, editedEntryId)
         .then(getAndRenderEntries);
       clearForm();
-    }
-    if (
+    } else if (
       editedEntryConcept === "" ||
       editedEntryDate === "" ||
       editedEntryMood === ""
@@ -135,4 +157,4 @@ document
     }
   });
 
-export default entryContainer;
+export default containers;

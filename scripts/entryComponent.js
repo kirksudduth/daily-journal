@@ -16,6 +16,17 @@ const makeJournalEntryComponent = {
         <button id="edit--${journalEntry.id}">Edit</button></div>
     `;
   },
+  mood: function (journalMood) {
+    return `
+    <option value="${journalMood.id}">${journalMood.label}</option>
+    `;
+  },
+  filterMood: function (journalMood) {
+    return `
+    <input type="radio" id="${journalMood.id}" name="mood" value="mood--${journalMood.id}" />
+          <label for="${journalMood.id}">${journalMood.label}</label>
+    `;
+  },
 };
 
 export default makeJournalEntryComponent;

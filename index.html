@@ -13,7 +13,7 @@
   </head>
   <body>
     <h1 class="dailyJournal disabled">Daily Journal</h1>
-    <form action="">
+    <form action="" id="firstForm">
       <fieldset class="journalDate">
         <label for="journalDate">Date of entry</label>
         <input type="date" name="journalDate" id="journalDate" />
@@ -34,84 +34,19 @@
       <fieldset class="mood">
         <label for="mood">Mood for the day</label>
 
-        <select name="mood" id="mood">
-          <option value="1">Happy</option>
-          <option value="2">Ecstatic</option>
-          <option value="3">Meh</option>
-          <option value="4">Sad</option>
-          <option value="5">Weepy</option>
-          <option value="6">Pissed</option>
-          <option value="7">Confused</option>
-          <option value="8">Optimistic</option>
-          <option value="9">Depressed</option>
-        </select>
+        <select name="mood" id="moods"> </select>
       </fieldset>
       <input
         id="button__recordEntry"
         type="submit"
         value="Record Journal Entry"
       />
+    </form>
+    <form id="secondForm">
       <fieldset id="mood__filter">
         <legend>Filter Journal Entries by Mood</legend>
-        <div id="moodies">
-        <div>
-          <input type="radio" id="happy" name="mood" value="mood--happy" />
-          <label for="happy">Happy</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            id="ecstatic"
-            name="mood"
-            value="mood--ecstatic"
-          />
-          <label for="ecstatic">Ecstatic</label>
-        </div>
-        <div>
-          <input type="radio" id="meh" name="mood" value="mood--meh" />
-          <label for="meh">Meh</label>
-        </div>
-        <div>
-          <input type="radio" id="sad" name="mood" value="mood--sad" />
-          <label for="sad">Sad</label>
-        </div>
-        <div>
-          <input type="radio" id="weepy" name="mood" value="mood--weepy" />
-          <label for="weepy">Weepy</label>
-        </div>
-        <div>
-          <input type="radio" id="pissed" name="mood" value="mood--pissed" />
-          <label for="pissed">Pissed</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            id="confused"
-            name="mood"
-            value="mood--confused"
-          />
-          <label for="confused">Confused</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            id="optimistic"
-            name="mood"
-            value="mood--optimistic"
-          />
-          <label for="optimistic">Optimistic</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            id="depressed"
-            name="mood"
-            value="mood--depressed"
-          />
-          <label for="depressed">Depressed</label>
-        </div>
+        <div id="mood-filter__options"></div>
       </fieldset>
-      </div>
     </form>
 
     <section id="entryForm">
@@ -130,17 +65,7 @@
             id="formEntry"
           ></textarea>
           <label for="journalFormMood">Mood</label>
-          <select name="formMood" id="formMood">
-            <option value="happy">Happy</option>
-            <option value="ecstatic">Ecstatic</option>
-            <option value="meh">Meh</option>
-            <option value="sad">Sad</option>
-            <option value="weepy">Weepy</option>
-            <option value="pissed">Pissed</option>
-            <option value="confused">Confused</option>
-            <option value="optimistic">Optimistic</option>
-            <option value="depressed">Depressed</option>
-          </select>
+          <select name="formMoods" id="formMoods"> </select>
           <button id="btn--saveFormEntry">Save Entry</button>
         </fieldset>
       </form>

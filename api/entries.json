@@ -44,13 +44,6 @@
     },
     {
       "date": "2020-05-05",
-      "concepts": "POST",
-      "entry": "journal",
-      "moodId": 8,
-      "id": 12
-    },
-    {
-      "date": "2020-05-05",
       "concepts": "mo POST",
       "entry": "Finally got all this junk working after Bryan helped me out. Do I understand it?? eehhhh",
       "moodId": 2,
@@ -71,74 +64,32 @@
       "id": 17
     },
     {
-      "concepts": "more",
-      "date": "2020-05-14",
-      "entry": "hahahahahahaah",
-      "moodId": 9,
-      "id": 21
-    },
-    {
-      "concepts": "hey hey",
-      "date": "2020-05-14",
-      "entry": "hey hey",
-      "moodId": 1,
-      "id": 22
-    },
-    {
-      "date": "2020-05-14",
-      "concepts": "POST",
-      "entry": "a",
-      "moodId": 2,
-      "id": 24
-    },
-    {
       "date": "2020-05-14",
       "concepts": "fetch",
-      "entry": "a",
-      "moodId": 1,
-      "id": 25
+      "entry": "I'm working on this damn thing and it's not working. I want it to work. Why can't I talk to you how I want you to hear me? What's it gonna take? Time? I can give you some.",
+      "moodId": 3,
+      "id": 18
     },
     {
       "date": "2020-05-14",
-      "concepts": "a",
-      "entry": "a",
-      "moodId": 1,
-      "id": 26
-    },
-    {
-      "date": "2020-05-14",
-      "concepts": "POST",
-      "entry": "a",
-      "moodId": 1,
-      "id": 27
-    },
-    {
-      "date": "2020-05-14",
-      "concepts": "run",
-      "entry": "run",
-      "moodId": 1,
-      "id": 28
-    },
-    {
-      "date": "2020-05-14",
-      "concepts": "bbb",
-      "entry": "aaa",
-      "moodId": 5,
-      "id": 29
-    },
-    {
-      "date": "2020-05-14",
-      "concepts": "reee",
-      "entry": "333",
+      "concepts": "click events",
+      "entry": "It's more like functions in click events that I'm trying to get working. Now I'm on some other stuff -- not even doing what I came here to start doing. We're gonna get connected though. It'll happen.",
       "moodId": 8,
-      "id": 30
+      "id": 19
     },
     {
       "date": "2020-05-14",
-      "concepts": "aaasdfasf",
-      "entry": "asdfasdfasdf",
-      "moodId": 7,
-      "id": 31
+      "concepts": "click events",
+      "entry": "It's more like functions in click events that I'm trying to get working. Now I'm on some other stuff -- not even doing what I came here to start doing. We're gonna get connected though. It'll happen.",
+      "moodId": 8,
+      "id": 20
+    },
+    {
+      "date": "2020-05-16",
+      "concepts": "browser events",
+      "entry": "Got the click event doing what I want it to do in the Edit Journal Entry portion of the page! Feels good. I'll probably click this button and the whole thing's gonna fall apart. \nEDIT: It didn't fall apart!! That makes me happy.",
+      "moodId": "8",
+      "id": 21
     }
   ],
   "moods": [

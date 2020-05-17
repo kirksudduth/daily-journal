@@ -1,15 +1,28 @@
 console.log("IF YOU'RE AFRAID TO DO IT, DO IT UNTIL YOU'RE NOT.");
 
 import makeJournalEntryComponent from "./entryComponent.js";
-import entryContainer from "./journal.js";
+import containers from "./journal.js";
 
 function renderEntries(journalEntries) {
   // const entryLog = document.querySelector(".entryLog");
-  // entryLog.innerHTML = "";
+  containers.entryContainer.innerHTML = "";
   for (let i = journalEntries.length - 1; i >= 0; i--) {
     const allEntries = journalEntries[i];
-    entryContainer.innerHTML += makeJournalEntryComponent.entry(allEntries);
+    containers.entryContainer.innerHTML += makeJournalEntryComponent.entry(
+      allEntries
+    );
   }
 }
 
-export default renderEntries;
+function renderMoods(moods) {
+  moods.forEach((mood) => {
+    containers.moodsContainer.innerHTML += makeJournalEntryComponent.mood(mood);
+    containers.moodsEditContainer.innerHTML += makeJournalEntryComponent.mood(
+      mood
+    );
+    containers.moodsFilterContainer.innerHTML += makeJournalEntryComponent.filterMood(
+      mood
+    );
+  });
+}
+export default { renderEntries, renderMoods };
