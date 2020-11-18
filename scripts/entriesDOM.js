@@ -4,7 +4,6 @@ import makeJournalEntryComponent from "./entryComponent.js";
 import containers from "./journal.js";
 
 function renderEntries(journalEntries) {
-  // const entryLog = document.querySelector(".entryLog");
   containers.entryContainer.innerHTML = "";
   for (let i = journalEntries.length - 1; i >= 0; i--) {
     const allEntries = journalEntries[i];
